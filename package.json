@@ -1,6 +1,6 @@
 {
   "name": "electron-vue-serial-app",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "type": "module",
   "description": "An offline desktop app for serial communication",
   "main": "out/main/index.js",
@@ -60,8 +60,7 @@
     "publish": {
       "provider": "github",
       "owner": "YouNianEn",
-      "repo": "LINOVISION",
-      "strategy": "onTag"
+      "repo": "LINOVISION"
     }
   }
 }
