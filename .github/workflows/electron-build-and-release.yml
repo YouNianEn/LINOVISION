@@ -26,6 +26,7 @@ jobs:
         run: npm run build
 
       - name: Verify GH_TOKEN
+        shell: bash
         run: |
           if [ -z "$GH_TOKEN" ]; then
             echo "GH_TOKEN is not set correctly."
@@ -35,4 +36,4 @@ jobs:
           fi
 
       - name: Build and release
-        run: npm run dist    
+        run: npm run dist
