@@ -60,7 +60,8 @@
     "publish": {
       "provider": "github",
       "owner": "YouNianEn",
-      "repo": "LINOVISION"
+      "repo": "LINOVISION",
+      "strategy": "onTag"
     }
   }
 }
