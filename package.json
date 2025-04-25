@@ -1,0 +1,67 @@
+{
+  "name": "electron-vue-serial-app",
+  "version": "1.0.5",
+  "type": "module",
+  "description": "An offline desktop app for serial communication",
+  "main": "out/main/index.js",
+  "author": "bily@linovision.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YouNianEn/LINOVISION.git"
+  },
+  "license": "MIT",
+  "scripts": {
+    "start": "electron-vite dev --config electron.vite.config.js",
+    "build": "electron-vite build --config electron.vite.config.js",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "dependencies": {
+    "@serialport/bindings-cpp": "^13.0.1",
+    "crc": "^4.3.2",
+    "echarts": "^5.6.0",
+    "element-plus": "^2.9.7",
+    "moment-timezone": "^0.5.48",
+    "pinia": "^3.0.1",
+    "serialport": "^13.0.0",
+    "vue": "^3.2.47",
+    "vuex": "^4.0.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.3",
+    "electron": "^31.7.7",
+    "electron-builder": "^24.13.3",
+    "electron-reload": "^2.0.0-alpha.1",
+    "electron-updater": "^6.6.2",
+    "electron-vite": "^2.3.0",
+    "vite": "^5.0.0"
+  },
+  "build": {
+    "appId": "com.example.electronvueserialapp",
+    "productName": "Electron Vue Serial App",
+    "copyright": "Copyright © 2025 Your Name",
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "build/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    },
+    "files": [
+      "out/**/*"
+    ],
+    "electronDownload": {
+      "mirror": "https://mirrors.huaweicloud.com/electron/"
+    },
+    "publish": {
+      "provider": "github",
+      "owner": "YouNianEn",
+      "repo": "LINOVISION",
+      "token": "$GH_TOKEN"
+    }
+  }
+}
