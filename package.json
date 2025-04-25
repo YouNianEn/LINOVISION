@@ -60,8 +60,7 @@
     "publish": {
       "provider": "github",
       "owner": "YouNianEn",
-      "repo": "LINOVISION",
-      "token": " ${env:GH_TOKEN}"
+      "repo": "LINOVISION"
     }
   }
 }
